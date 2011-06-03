@@ -1,0 +1,8 @@
+# uninstall all ruby gems
+#GEMS=`sudo gem list --no-versions`
+#for x in $GEMS ; do sudo gem uninstall $x;  done
+
+# You can use the -i flag to specify a gem directory
+GEMS=`gem list --no-versions`
+for x in $GEMS ; do gem uninstall $x --ignore-dependencies --all --executables; done
+
